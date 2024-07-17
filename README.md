@@ -2,6 +2,13 @@
 
 ## Introduction
 
+to be conti
+
+## build on native linux
+
+### CMake needed
+
+
 
 
 
