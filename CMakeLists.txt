@@ -1,9 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(sick_lidar_localization)
 
-    add_compile_options(-g -Wall -Wno-reorder -Wno-sign-compare -Wno-unused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result)
-    # add_compile_options(-Wshadow) # Note: compiler option -Wshadow generates a lot of warnings in ros header files. Therefore it's deactivated by default, but can be usefull for development and testing.
-    set(LINUX_LIBRARIES pthread)    # gcc maps std::thread to pthread, using std::thread requires linking with pthread
+set(LINUX_LIBRARIES pthread)    # gcc maps std::thread to pthread, using std::thread requires linking with pthread
    
 #######################
 ## Required packages ##
