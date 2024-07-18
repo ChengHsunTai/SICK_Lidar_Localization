@@ -2,18 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 project(sick_lidar_localization)
 
 set(LINUX_LIBRARIES pthread)    # gcc maps std::thread to pthread, using std::thread requires linking with pthread
-   
-#######################
-## Required packages ##
-#######################
 
 find_package(CURL REQUIRED)
 find_package(jsoncpp REQUIRED)
-
-
-###########
-## Build ##
-###########
 
 include_directories(include include/tinyxml ${catkin_INCLUDE_DIRS} ${CURL_INCLUDE_DIRS})
 
@@ -45,8 +36,5 @@ target_link_libraries(gen_service_call sick_localization_lib ${CURL_LIBRARIES} j
 
 add_dependencies(sick_lidar_localization_main sick_localization_lib)
 
-#############
-## Install ##
-#############
 
 install(DIRECTORY launch DESTINATION ${CMAKE_BINARY_DIR})
