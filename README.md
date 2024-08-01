@@ -75,9 +75,9 @@ When running the `sick_lidar_localization`, you will get the `output.txt` file i
 ## LiDAR LOC
 
 LiDAR_LOC is designed for industrial automation and robotics navigation. It can provide different types of messages for various applications.
-
+```
 ./build/gen_service_call LocInitializeAtPose POST "{\"data\": {\"pose\":{\"x\":10300, \"y\":-5200, \"yaw\":30000}, \"searchRadius\":1000}}" -d=2
-
+```
 
 
 
