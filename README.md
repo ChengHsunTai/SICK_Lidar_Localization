@@ -77,7 +77,8 @@ When running the `sick_lidar_localization`, you will get the `output.txt` file i
 LiDAR_LOC is designed for industrial automation and robotics navigation. It can provide different types of messages for various applications.
 
 ### 1. Creating a map
-First of all, uploading a map that
+First of all, we need to upload a map so that LiDAR_LOC can start to loclaization and navigation.
+
 
 
 ```
