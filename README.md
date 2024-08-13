@@ -119,16 +119,21 @@ Click on 'Record Data' and move the Lidar sensor around to start recording a map
 I'll indroduce three ways to initialize pose for relocalization. 
 
 ### 1. initialize pose with LiDAR_LOC
-Turn on 'Pose Initialization,' then use the mouse to click on the position and drag it to align with the sensor's orientation.
+Turn on 'Pose Initialization,' then click on the position and drag it to align with the sensor's orientation.
 
 ![alt text](image/image-8.png)
 
+### 2. REST API
+
+LiDAR-LOC can be configured using a JSON REST API.
+
+in the `build` directory, open a terminal and enter the command below:
+
 ```
-./build/gen_service_call LocInitializeAtPose POST "{\"data\": {\"pose\":{\"x\":10300, \"y\":-5200, \"yaw\":30000}, \"searchRadius\":1000}}" -d=2
+/gen_service_call LocInitializeAtPose POST "{\"data\": {\"pose\":{\"x\":10300, \"y\":-5200, \"yaw\":30000}, \"searchRadius\":1000}}" -d=2
 ```
 
+Then turn back to see the visual map in LIDAR_LOC, as you can see, the sensor's postion will be at (10.3, -5.2). And orientation is 30 degree.
 
-
-
-
+### 3.  Communication via CoLa2
 
