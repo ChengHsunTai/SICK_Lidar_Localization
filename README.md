@@ -76,9 +76,44 @@ When running the `sick_lidar_localization`, you will get the `output.txt` file i
 
 LiDAR_LOC is designed for industrial automation and robotics navigation. It can provide different types of messages for various applications.
 
-### 1. Creating a map
-First of all, we need to upload a map so that LiDAR_LOC can start to loclaization and navigation.
+### 1. Uploading a map
+First of all, we need to upload a map so that LiDAR_LOC can start to loclaization and navigation. following the step below to create a map.
 
+* 1. Open LiDAR_LOC and log in with "service". And Click "Maps" in the device
+
+![alt text](image.png)
+
+Click on 'Record Data' and move the Lidar sensor around to start recording a map. After finishing the map recording, download the file from 'Map Recording File'.
+
+![alt text](image-1.png)
+
+* 2. Open SMET (SICK Map Engineering Tool), which requires a license to convert a map file into '.vmap' file needed by LiDAR_LOC.
+
+![alt text](image-2.png)
+
+* 3. Open the map file you have recorded, and click 'import SC'.
+
+![alt text](image-3.png) 
+
+* 4. Click 'find loop closure' in 'find loop closure' dropdown.
+
+![alt text](image-6.png)
+
+* 5. You can change the map's position and orientation to a certain place in 'Graph position' dropdown
+
+![alt text](image-7.png)
+
+* 6. Finally, click on 'Export VMAP' to download the map.
+
+* 7. Go back to the LiDAR_LOC and upload the '.vmap' file you just downloaded.
+
+![alt text](image-9.png)
+
+* 8. After uploading the map, you can input it to visualize and use for localization.
+
+![alt text](image-10.png)
+
+## 2. Change initial 
 
 
 ```
