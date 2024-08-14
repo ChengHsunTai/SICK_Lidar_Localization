@@ -79,7 +79,7 @@ LiDAR_LOC is designed for industrial automation and robotics navigation. It can 
 ### 1. Uploading a map
 First of all, we need to upload a map so that LiDAR_LOC can start to loclaization and navigation. following the step below to create a map.
 
-* 1. Open LiDAR_LOC and log in with "service". And Click "Maps" in the device
+* 1. Open LiDAR_LOC and log in with "service" (Password: servicelevel). And Click "Maps" in the device
 
 ![alt text](image/image.png)
 
@@ -136,4 +136,6 @@ in the `build` directory, open a terminal and enter the command below:
 Then turn back to see the visual map in LIDAR_LOC, as you can see, the sensor's postion will be at (10.3, -5.2). And orientation is 30 degree.
 
 ### 3.  Communication via CoLa2
+
+
 
