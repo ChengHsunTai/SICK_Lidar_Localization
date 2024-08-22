@@ -75,8 +75,14 @@ When running the `sick_lidar_localization`, you will get the `output.txt` file i
 ## LiDAR LOC
 
 LiDAR_LOC is designed for industrial automation and robotics navigation. It can provide different types of messages for various applications.
+### 1. Log in LiDAR_LOC
+* 1. connect the device properly like the image shown below.And enter SIM1000 IP address into the browser's address line. The default IP address is usually "192.168.0.1".
 
-### 1. Uploading a map
+picture!!!!!!!!!!
+
+![alt text](image/image-12.png)
+
+### 2. Uploading a map
 First of all, we need to upload a map so that LiDAR_LOC can start to loclaization and navigation. following the step below to create a map.
 
 * 1. Open LiDAR_LOC and log in with "service" (Password: servicelevel). And Click "Maps" in the device
