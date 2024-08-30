@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <chrono>
 #include <iostream>
 #include <cstring>
@@ -6,6 +6,7 @@
 
 #include "lidarFormat.h"
 #include "lidarFlow.h"
+#include "lidarThread.h"
 // #include "sick_lidar_localization/include/sick_lidar_localization/sick_common.h"
 // #include "sick_lidar_localization/include/sick_lidar_localization/udp_message_parser.h"
 
@@ -25,6 +26,8 @@ using namespace std::chrono_literals;
 int main() {
     lidarFormat format;
     lidarFlow flow;
+    lidarThread thread;
+
     int sock = flow.openTCPsocket();
     //open session to lidar
     const char *tte = format.opensession();
@@ -50,10 +53,14 @@ int main() {
 
     //function to get position and orientation value
 
-    char *pose;
+    int64_t x, y;
+    int32_t heading;
+    char *pose = thread.InitializedPose(x, y, heading);
     
     //send LocInitializeAtPose command
-    format.callinitializepose(sessoin_id, pose);
+    char *callinitializepose = format.callinitializepose(sessoin_id, pose);
+
+    send(sock, callinitializepose, 52, 0);
 
     bytes_received = recv(sock, response, sizeof(response), 0);
     if (bytes_received > 0) {
@@ -63,10 +70,12 @@ int main() {
     }
     std::cout << std::endl;
     }
-    
+
+    char *closesession = format.closesession(sessoin_id);
+
+    send(sock, closesession, 18, 0);
+
     flow.closeTCPsocket(sock);
 
     return 0;
 }
-
-
