@@ -14,12 +14,11 @@ TCP/IP consists of four layers: Application layer, Transport layer, Internet lay
 
 ### CoLa2
 
-CoLa2(Command Language 2) is an protocol from SICK, but actually, it use TCP/IP to communicate with LiDAR_LOC, nothing special.
+SICK's CoLa2(Command Language 2) protocol uses standard TCP/IP for communication with the LiDAR_LOC system, making it straightforward and nothing out of the ordinary.
 
 Following the steps below.
 
 * 1. 
-
 
 ## Reference
 
