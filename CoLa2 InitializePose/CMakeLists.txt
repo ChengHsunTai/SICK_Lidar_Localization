@@ -1,4 +1,4 @@
-﻿# CMakeList.txt: CMakeTest 的 CMake 專案，在此包含來源及定義
+# CMakeList.txt: CMakeTest 的 CMake 專案，在此包含來源及定義
 # 專案專屬邏輯。
 #
 cmake_minimum_required (VERSION 3.8)
