@@ -1,4 +1,4 @@
-﻿#include "lidarFormat.h"
+#include "lidarFormat.h"
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -39,10 +39,10 @@ char *lidarFormat::callinitializepose(const char *session_id, const char *pose){
                             "\x4D\x4E"          // Cmd = "M", Mode = "N"
                             "\x4C\x6F\x63\x49\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x74\x50\x6F\x73\x65"  // Method name: "LocInitializeAtPose"
                             "\x20";              // Space
-	memcpy(&initpose[13], middle_data,24);
-	memcpy(&initpose[37], pose, 12);
+	memcpy(&initpose[14], middle_data,24);
+	memcpy(&initpose[38], pose, 12);
 	const char *subsequent_data = "\x03\xE8";
-	memcpy(&initpose[49], subsequent_data, 2);
+	memcpy(&initpose[50], subsequent_data, 2);
 
 	char *initializepose = &initpose[0];
 	return initializepose;
