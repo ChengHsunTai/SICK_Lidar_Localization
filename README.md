@@ -143,5 +143,5 @@ Then turn back to see the visual map in LIDAR_LOC, as you can see, the sensor's 
 
 ### 3.  Communication via CoLa2
 
-
+Please see the directory `CoLa2 InitializePose`
 
